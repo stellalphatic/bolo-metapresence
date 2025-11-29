@@ -22,7 +22,7 @@ export default function HeroSection() {
           toggleActions: "play none none none",
         },
         duration: 1,
-        opacity: 0,
+        // opacity: 0,
         y: 50,
         ease: "power3.out",
       });
@@ -34,7 +34,7 @@ export default function HeroSection() {
           toggleActions: "play none none none",
         },
         duration: 1.2,
-        opacity: 0,
+        // opacity: 0,
         y: 50,
         stagger: 0.1,
         ease: "power3.out",

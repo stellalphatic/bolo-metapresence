@@ -15,23 +15,22 @@ export default function DPAPage() {
           <div className="max-w-4xl mx-auto px-4">
             <a
               href="#home"
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
+              className="inline-flex items-center gap-2 text-gray-700 hover:text-[var(--accent-orange)] mb-6 transition-colors"
             >
               <ArrowLeft size={20} />
               Back to Home
             </a>
-            <motion.div
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-black text-gray-900 mb-4"
             >
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Data Processing Agreement
-              </h1>
-              <p className="text-white/60 mt-4">
-                Last updated: November 28, 2025
-              </p>
-            </motion.div>
+              Data Processing Agreement
+            </motion.h1>
+
+            <p className="text-gray-600 mb-12">
+              Last updated: November 28, 2025
+            </p>
           </div>
         </div>
 

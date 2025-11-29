@@ -15,12 +15,12 @@ export default function ProblemsSection() {
     const ctx = gsap.context(() => {
       gsap.from(".problem-card", {
         scrollTrigger: {
-          trigger: ".problem-card",
+          trigger: "sectionRef.current", // using section, not cards themselves
           start: "top 70%",
           toggleActions: "play none none none",
         },
         duration: 0.8,
-        opacity: 0,
+        // opacity: 0,
         y: 40,
         stagger: 0.15,
         ease: "power3.out",

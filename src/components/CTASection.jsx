@@ -17,12 +17,12 @@ export default function CTASection() {
     const ctx = gsap.context(() => {
       gsap.from(".cta-content", {
         scrollTrigger: {
-          trigger: ".cta-content",
+          trigger: "sectionRef.current", // using section Ref
           start: "top 75%",
           toggleActions: "play none none none",
         },
         duration: 1,
-        opacity: 0,
+        // opacity: 0,
         y: 50,
         stagger: 0.1,
         ease: "power3.out",
