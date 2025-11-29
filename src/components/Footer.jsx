@@ -158,20 +158,20 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span className="text-sm">+1 (888) BOLO-AI</span>
+                <span className="text-sm">+92 (325) 882-1216 </span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
                 <a
-                  href="mailto:hello@bolo.ai"
+                  href="mailto:contact@bolo.metapresence.my"
                   className="text-sm hover:text-white transition-colors"
                 >
-                  hello@bolo.ai
+                  contact@bolo.metapresence.my
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span className="text-sm">San Francisco, CA</span>
+                <span className="text-sm">BIC UET Lahore, Pakistan</span>
               </li>
             </ul>
           </div>
@@ -201,7 +201,7 @@ export default function Footer() {
               <Twitter size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/company/metapresence"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
