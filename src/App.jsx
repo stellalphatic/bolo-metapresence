@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ProblemsSection from "./components/ProblemsSection";
@@ -12,6 +14,7 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
+import CallModal from "./components/CallModal";
 import LoginPage from "./pages/LoginPage";
 import PricingPage from "./pages/PricingPage";
 import AboutPage from "./pages/AboutPage";
@@ -23,6 +26,7 @@ import DPAPage from "./pages/DPAPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isCallModalOpen, setIsCallModalOpen] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -72,6 +76,29 @@ function App() {
             <CTASection />
           </main>
           <Footer />
+
+          {/* Sticky Call Button */}
+          {currentPage === "home" && (
+            <motion.button
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsCallModalOpen(true)}
+              className="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 shadow-2xl flex items-center justify-center text-white hover:shadow-orange-500/50 transition-all duration-300"
+              style={{
+                boxShadow: "0 10px 40px rgba(255, 107, 53, 0.4)",
+              }}
+            >
+              <Phone className="w-7 h-7" />
+            </motion.button>
+          )}
+
+          {/* Call Modal */}
+          <CallModal
+            isOpen={isCallModalOpen}
+            onClose={() => setIsCallModalOpen(false)}
+          />
         </div>
       );
   }
